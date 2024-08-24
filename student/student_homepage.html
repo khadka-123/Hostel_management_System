@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Homepage</title>
+    <link href="../style/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container-logo">
+            <a class="navbar-logo" href="#" id="logoLink">
+                <img src="../style/logo.jpg" alt="Logo">
+            </a>
+        </div>
+        <div class="Dashboard">
+            <p>Student Dashboard</p>
+        </div>
+        <div class="container-logout">
+            <a href="../logout.php">
+                <img src="../style/logout_icon.jpg" alt="logout">
+                <span>Logout</span>
+            </a>
+        </div>
+    </nav>
+    <script>
+        // Get the current file name
+        var currentFileName = location.pathname.split('/').pop();
+        // Update the href attribute of the logo link
+        document.getElementById('logoLink').href = currentFileName;
+    </script>
+
+    <div class="container">
+        <div class="content">
+            <div class="card" onclick="window.location.href='my_detail.php';">
+                <img src="../style/search_icon.jpg">
+                <p class="title">Your Details</p>
+            </div>
+            <div class="card" onclick="window.location.href='student_parcel.php';">
+                <img src="../style/parcel_icon.jpg">
+                <p class="title">Your Parcel</p>
+            </div>
+            <div class="card" onclick="window.location.href='./leave/student_leave.php';">
+                <img src="../style/leave.jpg">
+                <p>Leave Details</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+

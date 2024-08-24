@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+   background:grey;
+    background:url(building.jpg) center/cover no-repeat fixed #f0f0f0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 500px;
+    height: 500px;
+    /* background: linear-gradient(to bottom right,rgb(177,179,183),rgb(109, 179, 214)); */
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgb(0,0, 0,0.9);
+}
+                                                      
+.user_name,.password{
+    margin-bottom: 20px;
+    width: 400px;
+    height: 50px;
+    position: relative;
+    background-color: white;
+}
+input{
+    padding: 10px;
+    float: right;
+    width: 88%;
+    height: 100%;
+    font-size: 20px;
+    outline: none;
+    border: none;
+}
+
+.bi{
+    width: 12%;
+    height: 100%;
+    text-align: center;
+    color:black ;
+    padding-top: 15px;
+    font-size:20px ;
+    float: left;
+
+}
+.drop_menu,.login{
+    margin-bottom: 20px;
+    
+}
+#dropmenu{
+    height: 50px;
+    width: 400px;
+    font-size: 20px;
+    padding-left: 30px;
+    outline: none;
+    border: none;
+}
+#conta{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: aqua;
+}
+#about_us{
+    background-color: rgb(44, 44, 44);
+}
+#login{
+    border-radius: 8px;
+    background-color:#4CAF50;
+    cursor: pointer;
+    width: 400px;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    outline: none;
+    border: none;
+}
+.register{
+    margin-top: 20px;
+}
+p{
+    font-size: 20px;
+    color: black;
+}
+a{
+    color:  blue;
+    font-size: 20px;
+    padding-left: 10px;
+    font-style: italic;
+} 

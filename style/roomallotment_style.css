@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background-size: 140vw 190vh;
+    background-position: center; 
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255) !important; 
+}
+
+
+/*---------nav section------ */
+
+.navbar {
+    background-color: rgb(255, 252, 235);
+    margin-top: 0px;
+    height: 45px;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar-logo img {
+    max-width: 100%;
+    max-height: 70px;
+    border-radius: 10px;
+    margin: -25px 0 0;
+}
+
+.Dashboard {
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+

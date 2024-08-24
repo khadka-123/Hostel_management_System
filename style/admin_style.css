@@ -1,0 +1,149 @@
+body {
+    background-image: url('3hp.jpg') !important;
+    background-repeat: no-repeat;
+    background-size: 140vw 190vh;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*----------card section -----------*/
+
+.container {
+    width: 100%;
+    max-width: 130vw;
+    margin: 0 auto;
+    padding: 0;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: calc(33.33% - 20px);
+    max-width: 400px;
+    min-width: 33%;
+    margin-top: 20% !important;
+    height: auto;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
+    background-color: rgb(227, 222, 193)!important;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        width: calc(100% - 20px);
+    }
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+    background-color: rgb(175, 218, 255)!important;
+}
+
+/*---------nav secion------ */
+.navbar {
+    background-color: rgb(255, 252, 235);
+    margin-top: 0px;
+    height: 45px;
+
+    position: relative;
+    width: 100%;
+}
+
+.navbar-logo img {
+    max-width: 100%;
+    max-height: 70px;
+    border-radius: 10px;
+    margin: -25px 0 0;
+    padding-top: 8px;
+}
+
+.Dashboard {
+    font-size: 30px;
+    font-weight: bold;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+
+    position: absolute;
+    left: 50%;
+    /* Position in the middle horizontally */
+    transform: translateX(-50%);
+    /* Center horizontally */
+    top: 0;
+    margin-top: 0;
+
+}
+.Dashboard p{
+    top: 0;
+    margin-top: 2%;
+    color: #654321;
+}
+
+.container-logout {
+    align-items: center;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    top: 0;
+    padding-top: 5px;
+}
+
+.container-logout:hover {
+    opacity: 0.7!important;
+}
+
+.container-logout a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-logout img {
+    width: 20px;
+    height: auto;
+    margin-left: 15px;
+    transition: opacity 0.3s ease;
+}
+
+.container-logout span {
+    padding-right: 15px;
+}

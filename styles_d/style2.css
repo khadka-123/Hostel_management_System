@@ -1,0 +1,106 @@
+/* For Navbar */
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.navbar {
+    height: 60px;
+    background-color: #0f1111;
+    color: white;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+
+    position: sticky;
+    z-index: 10;
+}
+
+.nav-logo {
+    height: 60px;
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    background-image: url("hostel_logo.jpg");
+    background-size: cover;
+    height: 60px;
+    width: 120px;
+}
+
+.stu {
+    font-size: 2rem;
+    color: bisque;
+    margin: auto; /* Center align the heading */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* For Roll no */
+
+
+body{
+    background-image: url(hp2.jpg);
+    background-size:auto;
+}
+
+#temp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100;
+    margin-top: 5%;
+}
+
+/* For Detail */
+.box{
+    /* margin-top: 100px;
+    margin-left: 300px;
+    margin-right: 300px; */
+    background-color: #0f1111;
+    border-radius: 15px;  
+    padding: 15px;
+    box-shadow: 5px 5px 10px rgb(221, 228, 236);
+    width: 70%;
+    height: auto;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px;
+    /* grid-template-columns: 250px 650px; */
+    gap: 5px;
+
+    /* edited */
+    grid-template-columns: 250px auto;
+}
+
+.grid-item-r1{
+    background-color: #0f1111;
+    color: wheat;
+    font-size: 25px; 
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 25px;
+    padding-top: 7px;
+}
+
+.grid-item-r2{
+    background-color: rgb(217, 213, 213);
+    color: black;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 25px;
+    padding-top: 7px;
+    
+}
+
+.grid-item p{
+    text-align: center;
+    font-size: 40px;
+}

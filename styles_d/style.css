@@ -1,0 +1,72 @@
+/* *{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 80%;
+    background-color: rgb(180, 119, 238);
+    padding: 30px;
+    margin: auto;
+}
+
+.container, h2, p{
+    text-align: center;
+}
+
+input{ 
+    display: block;
+    font-size: 25px;
+    width: 80%;
+    margin:11px auto;
+    padding: 7px;
+}
+
+.btn{
+    color: white;
+    background: purple;
+    padding: 8px 12px;
+    font-size: 20px;
+    border: 2px solid wheat;
+    border-radius: 14px;
+    cursor: pointer;
+}
+.submitMsg{
+    text-align: center;
+    color: green;
+} */
+
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    border: border-box;
+}
+
+.navbar{
+    height: 60px;
+    background-color: #0f1111;
+    color: white;
+    display: flex;
+}
+
+.nav-logo{
+    height: 60px;
+    width: 120px; 
+}   
+
+.logo{
+    background-image: url("hostal_logo.jpg");
+    background-size:cover;
+    height: 60px;
+    width: 120px;
+}
+
+
+/* Example: Using !important */
+.stu {
+    margin-left: 250px !important; 
+    font-size: 2rem !important;
+    text-align: center !important;
+    color: bisque !important;
+}
+

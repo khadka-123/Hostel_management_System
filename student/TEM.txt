@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Detail</title>
+    <link rel="stylesheet" href="../styles_d/style2.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo">
+                <a href="../student/student_homepage.html">
+                    <div class="logo"></div>
+                </a>
+            </div>
+
+            <div class="stu">
+                <h2>My Details</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- <form action="my_detail.php" method="post">
+        <input type="text" id="name" name="roll_no" placeholder="Enter your Roll number"><br><br>
+        <button class="btn">Submit</button>
+    </form> -->
+
+    <!-- Show details -->
+    <?php
+
+    if (!session_id()) {
+        session_start();
+        if (isset($_SESSION['email'])) {
+            $email = $_SESSION['email'];
+        } else {
+            echo "Please login";
+            exit; // Added exit to stop further execution if session is not set
+        }
+    }
+
+
+    // Database connection details
+    include('../admin/connection.php');
+
+    $sql = "SELECT * FROM student WHERE email = '$email'";  // using session
+    $result = $conn->query($sql);
+    $hostel_id = "";
+
+    if ($row = $result->fetch_assoc()) {
+        if(!empty($row['hostel_id'])){
+            $hostel_id = $row['hostel_id'];
+        }
+    }
+    $hostel_name = "";
+    // Read data from the database table
+    if ($hostel_id != "") {
+        $sql1 = "SELECT * FROM student NATURAL JOIN hostel WHERE hostel_id = '$hostel_id'";  // using session
+        $result1 = $conn->query($sql1); // Corrected variable name from $result to $result1
+
+        if ($row = $result1->fetch_assoc()) {
+            $hostel_name = $row['hostel_name'];
+        }
+    }
+
+    if ($result && $result->num_rows > 0) {
+    ?>
+        <div id="temp">
+            <div class="box">
+                <div class="grid-container">
+                    <?php
+                    while ($row = $result->fetch_assoc()) {
+                    ?>
+                        <div class="grid-item-r1">
+                            <h3>Name :</h3>
+                        </div>
+                        <div class="grid-item-r2">
+                            <p><?php echo $row["sname"]; ?></p>
+                        </div>
+                        <div class="grid-item-r1">
+                            <h3>Roll no :</h3>
+                        </div>
+                        <div class="grid-item-r2">
+                            <p><?php echo $row["roll_no"]; ?></p>
+                        </div>
+                        <div class="grid-item-r1">
+                            <h3>Email :</h3>
+                        </div>
+                        <div class="grid-item-r2">
+                            <p><?php echo $row["email"]; ?></p>
+                        </div>
+                        <div class="grid-item-r1">
+                            <h3>Gender :</h3>
+                        </div>
+                        <div class="grid-item-r2">
+                            <p><?php echo $row["gender"]; ?></p>
+                        </div>
+                        <div class="grid-item-r1">
+                            <h3>Address :</h3>
+                        </div>
+                        <div class="grid-item-r2">
+                            <p><?php echo $row["address"]; ?></p>
+                        </div>
+                        <div class="grid-item-r1">
+                            <h3>Phone no. :</h3>
+                        </div>
+                        <div class="grid-item-r2">
+                            <p><?php echo $row["phone_no"]; ?></p>
+                        </div>
+                        <div class="grid-item-r1">
+                            <h3>Hostel name :</h3>
+                        </div>
+                        <div class="grid-item-r2">
+                            <p><?php echo $hostel_name; ?></p> <!-- Changed $row["hostel_name"] to $hostel_name -->
+                        </div>
+                    <?php
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+    <?php
+    } else {
+        echo "No records found.";
+    }
+    $conn->close();
+    ?>
+</body>
+
+</html>

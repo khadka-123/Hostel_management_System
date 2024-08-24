@@ -1,0 +1,251 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0!important;
+    padding: 0!important;
+    background-image: url('../style/room_allotment_background.jpg') !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 140vw 190vh;
+}
+
+.navbar {
+    background-color: rgb(136, 124, 58);
+    margin: 0px;
+    height: 45px;
+    /* display: flex; */
+    /* position: sticky;
+    top: 0;
+    z-index: 10; */
+    padding: 0;
+    width: 100%;
+}
+.container-logo{
+    left: 0;
+    margin-left: 0;
+    padding: 0;
+    position: absolute;
+}
+
+.navbar-logo{
+    margin: 0 !important;
+    padding: 0;
+    left: 0;
+}
+
+.navbar-logo img {
+    /* max-width: 100%;
+    max-height: 70px;
+    border-radius: 10px;
+    margin: -25px 0 0; */
+
+    min-height: 78px;
+    
+    border-radius: 10px;
+    margin: -25px 0 0;
+    padding-top: 10px;
+    position: sticky;
+}
+
+.Dashboard {
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    margin-top: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 5px auto;
+    max-width: 80%;
+    font-size: 3vw;
+    color: #003256;
+}
+
+/*nav bar section---------*/
+.Dashboard {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.Dashboard h1 {
+    color: #654321;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 600px){
+    .Dashboard h1 {
+        font-size: 22px; /* Adjust font size for smaller screens */
+    }
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2vh; 
+}
+
+/* main form ------------------------------*/
+.form-container {
+    font-size: small;
+    font-weight: bold ;
+    justify-content: center;
+    margin: 2vh auto; 
+    padding: 2vw;
+    width: 60%; 
+    max-width: 90vw; 
+    min-width: 200px; 
+    min-height: 50px; 
+    background: linear-gradient(to bottom, rgba(188, 188, 188, 0.8), rgba(215, 215, 215, 0.8));
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/*1-------------- */
+#selectRoomForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+}
+
+.form-container form input[type="text"],
+.form-container form button {
+    margin-top: 1px; 
+    margin-bottom: 2px;
+    width: 90%; 
+}
+
+.dropdown {
+    align-items: center;
+    justify-content: center;
+    margin: 1vh 0;
+    width: 60%;
+}
+.dropdown-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+}
+.dropdown-menu li {
+    list-style: none; 
+}
+
+#optionSearch {
+    margin: 3px;
+    width: calc(100% - 6px);
+    padding: 1vh;
+    color: rgb(148, 148, 148);
+    background-color: #f5f5f5;
+    border: none;
+    text-align: center;
+}
+.dropdown ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+#dropdownMenuButton {
+    width: 100%; /* Make the button width 100% */
+    padding: 1vh; /* Adjusted for responsiveness */
+    color:rgb(148, 148, 148);
+    background-color: #ffffff;
+    border-style: none;
+}
+
+/*2-------------- */
+.roomDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+    padding: 2vw;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin: 2vh auto;
+    width: 60%; 
+    max-width: 90vw; 
+    min-width: 200px;
+    min-height: 30px; 
+}
+#room_d_{
+    margin-bottom: 10px;
+    font-size: 2.5vh;
+}
+.room_d {
+    padding: 0.7vw 0.9vw; 
+    background-color: #395778;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-right: 5px;
+
+}
+#room_properties {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#room_properties > div {
+    flex: 0 0 calc(100% / 3 - 10px);
+    margin: 5px;
+}
+#roommate_details{
+    align-items: center;
+}
+#room_no{
+    margin-bottom: 5px;
+}
+.inner{
+    color:#c0d7ff;
+}
+
+
+/*3---------------*/
+/*roll no and add student button section*/
+#addStudentForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2vh auto; /* Adjusted for responsiveness */
+}
+
+#addStudentForm input[type="text"] {
+    margin-bottom: 1vh; 
+    padding: 1.5vh; 
+    width: 80%; 
+}
+
+.btn.btn-secondary[name="add_student"] {
+    width: 80%; 
+    padding: 2vh; 
+    font-size: 2vw; 
+    background-color: rgb(29, 67, 96);
+}
+
+.btn.btn-secondary[name="add_student"]:hover {
+    background-color: #001933;
+}
